@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<% let title = jsonData.pages[path].title %>
+<% let description = jsonData.pages[path].description %>
+<% let keywords = jsonData.pages[path].keywords %>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,maximum-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <title><%= title %>｜<%= jsonData.siteInfo.baseTitle %></title>
+  <meta name="description" content="<%= description %>">
+  <meta name="keywords" content="<%= keywords %>">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+  <link rel="stylesheet" href="css/base.min.css">
+  <% if( path === 'component' || path === 'component4' ){ %>
+  <link rel="stylesheet" href="css/components.css">
+  <% } %>
+  <% if( path === 'form' ){ %>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.css" integrity="sha512-bYPO5jmStZ9WI2602V2zaivdAnbAhtfzmxnEGh9RwtlI00I9s8ulGe4oBa5XxiC6tCITJH/QG70jswBhbLkxPw==" crossorigin="anonymous" />
+  <% } %>
+  <% if(path === 'component4'){ %>
+  <link rel="stylesheet" href="https://unpkg.com/scroll-hint@1.1.10/css/scroll-hint.css">
+  <% } %>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script src="js/slick_option.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js"></script>
+  <% if( path === 'form' ){ %>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js" integrity="sha512-AIOTidJAcHBH2G/oZv9viEGXRqDNmfdPVPYOYKGy3fti0xIplnlgMHUGfuNRzC6FkzIo0iIxgFnr9RikFxK+sw==" crossorigin="anonymous"></script>
+  <script src="js/datepick_option.js"></script>
+  <script src="js/jquery.zip2addr.js"></script>
+  <% } %>
+  <% if(path === 'component' || path === 'component4'){ %>
+  <script src="js/components.js"></script>
+  <% } %>
+  <% if(path === 'component4'){ %>
+  <script src="https://unpkg.com/scroll-hint@1.1.10/js/scroll-hint.js"></script>
+  <script src="js/scroll-hint_option.js"></script>
+  <% } %>
+  <script src="js/common.js"></script>
+</head>
+
+<body>
+  <% var page = (path === 'index' ? "" : "under") %>
+  <div id="wrapper" class="wrapper <%= page %> <%= path %>">
+
+    <h1 class="pagettl"><%= jsonData.pages[path].title %>｜<%= jsonData.siteInfo.baseH1 %></h1>
+    <!-- ヘッダー -->
+    <header>
+      <div class="header-logo">
+        <a href=""><img src="images/600x420.jpg.webp" alt=""></a>
+      </div>
+      <div class="gnav">
+        <div class="toggle"><button class="bar"></button></div>
+        <div class="gnavinn">
+          <ul class="g-list up-d-flex up-jc-sb up-fxd-col@tb">
+            <li class="g-item">
+              <a href="05service.html">メニュー</a>
+            </li>
+            <li class="g-item">
+              <a href="06voice.html">お客様の声</a>
+            </li>
+            <li class="g-item pull">
+              <a>事業内容</a>
+              <div class="pull-box">
+                <div class="accordionbox">
+                  <ul>
+                    <li>
+                      <a href="02about.html">楽座やとは</a>
+                    </li>
+                    <li>
+                      <a href="03yomogi.html">よもぎ蒸し</a>
+                    </li>
+                    <li>
+                      <a href="04germa.html">ゲルマニウム温浴</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="g-item">
+              <a href="07hayasaka.html">早坂理恵体験レポート</a>
+            </li>
+            <li class="g-item">
+              <a href="08report.html">来店の流れ</a>
+            </li>
+            <li class="g-item">
+              <a href="12onlinestore.html">オンラインストア</a>
+            </li>
+            <li class="g-item pc-none">
+              <a href="13coupon.html">クーポン</a>
+            </li>
+            <li class="g-item pc-none">
+              <a href="14contact.html">お問い合わせ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
