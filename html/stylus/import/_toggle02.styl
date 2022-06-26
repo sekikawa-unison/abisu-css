@@ -1,0 +1,81 @@
+/* ---------------------------
+ハンバーガーメニューボタン
+----------------------------- */
+
+.gnav {
+  .toggle {
+    display: block;
+    position: fixed;
+    width: 42px;
+    height: 42px;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+    opacity: 0.8;
+    z-index: 999;
+    display: none;
+    button {
+      border-style: inherit;
+    }
+  }
+  .bar {
+    display: block;
+    background: #000;
+    height: 2px;
+    width: 28px;
+    text-indent: 9999px;
+    padding: 0;
+    top: 50%;
+    left: 7px;
+    margin-top: -1px;
+    position: absolute;
+    -webkit-transition: ease 0.4s;
+    transition: ease 0.4s;
+    &:before {
+      display: block;
+      content: "";
+      background: #000;
+      height: 2px;
+      width: 28px;
+      position: absolute;
+      top: -10px;
+      left: 0;
+    }
+    &:after {
+      display: block;
+      content: "";
+      background: #000;
+      height: 2px;
+      width: 28px;
+      position: absolute;
+      top: 10px;
+      left: 0;
+    }
+  }
+}
+
+.gnav.action .toggle .bar {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.gnav.action .toggle .bar:after,
+.gnav.action .toggle .bar:before {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  top: 0;
+  left: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  .gnav {
+    .toggle {
+      display: block;
+      text-indent: 999px;
+    }
+  }
+}
+
+/* ---------------------------
+ハンバーガーメニューボタン END
+----------------------------- */
