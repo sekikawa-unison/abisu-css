@@ -91,29 +91,34 @@ dt {
 
 /* 偶数と奇数番目で左右反転No.2 */
 .up-fxd-even2>*:nth-child(even) .up-d-flex,
-.up-fxd-odd2>*:nth-child(odd) .up-d-flex
-  -webkit-box-orient horizontal
-  -webkit-box-direction reverse
-  -ms-flex-direction row-reverse
-  flex-direction row-reverse
+.up-fxd-odd2>*:nth-child(odd) .up-d-flex {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
 
 /* 片方のみブラウザ幅いっぱい（1200px基準） */
 
-.up-left-1200
-  margin-left calc(50% - 600px)
+.up-left-1200 {
+  margin-left: calc(50% - 600px);
+}
 
-.up-right-1200
-  margin-right calc(50% - 600px)
+.up-right-1200 {
+  margin-right: calc(50% - 600px);
+}
 
 [class*=up-fxd-even]>.up-left-1200:nth-child(even),
-[class*=up-fxd-odd]>.up-left-1200:nth-child(odd)
-  margin-left 0
-  margin-right calc(50% - 600px)
+[class*=up-fxd-odd]>.up-left-1200:nth-child(odd) {
+  margin-left: 0;
+  margin-right: calc(50% - 600px);
+}
 
 [class*=up-fxd-even]>.up-right-1200:nth-child(even),
-[class*=up-fxd-odd]>.up-right-1200:nth-child(odd)
-  margin-right 0
-  margin-left calc(50% - 600px)
+[class*=up-fxd-odd]>.up-right-1200:nth-child(odd) {
+  margin-right: 0;
+  margin-left: calc(50% - 600px);
+}
 
 @media only screen and (max-width: 1224px) {
   .up-left-1200 {
